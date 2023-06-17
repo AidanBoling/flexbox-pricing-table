@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200&display=swap" rel="stylesheet">  
+  <style>
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .pricing-container {
+      display: flex;
+      height: 85vh;
+      gap: 3%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-plan {
+      flex-basis: 350px;
+      min-width: 270px;
+      height: 650px;
+
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(190, 157, 157, 0.7), 0 -2px 8px rgba(190, 157, 157, 0), 2px -1px 10px rgba(190, 157, 157, 0.3), -2px -1px 10px rgba(234, 212, 173, 0.5), inset 0px -3px 12px rgba(199, 127, 73, 0.84);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .pricing-header {
+      flex-basis: 125px;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+
+      border-radius: 15px 15px 0 0;
+      background-image: linear-gradient(160deg,rgb(255, 244, 85), 30%, rgb(255, 84, 112) 90%); 
+      box-shadow: inset 0px 4px 7px rgb(255, 252, 217);
+
+    }
+
+    .plan-title {
+      margin-top: 8%;
+      
+      color: white;
+      font-weight: 500;
+      font-size: 48px;
+      text-align: center;
+    }
+
+    .pricing-plan > * {
+      align-content: flex-start;
+    }
+    
+    .plan-price span {
+      font-weight: 500;
+      font-size: 46px;
+    }
+
+    ul {
+      min-height: 150px;
+      align-self: stretch;
+      padding-left: 30%;
+      list-style: '✅ ';
+      
+      font-size: 22px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    li.no {
+      list-style: '🚫 ';
+    } 
+
+    button {
+      width: 55%;
+      height: 11%;
+      margin-bottom: 14%;
+
+      /*background: linear-gradient(.50turn, rgb(178, 214, 255, .96), 10%, rgb(238, 250, 255), 90%, rgba(178, 214, 255, 0.96));*/
+      border-radius: 7px;
+      border-width: 0;
+      border-color: rgba(135, 206, 250, 0.343);
+      box-shadow: 0 2px 7px rgba(248, 186, 88, 0.70), inset 0px -4px 13px rgb(249, 124, 82), inset 0px 4px 10px rgba(255, 234, 141, 0.862);
+
+      background-image: linear-gradient(180deg,rgb(255, 243, 110) 1%, 20%, rgba(251, 71, 104, .9), 90%, rgb(255, 244, 85) 99%); 
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+
+
+    @media (max-width: 870px) {
+    
+    .pricing-container {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .pricing-plan {
+      flex-basis: 600px;
+      min-width: 400px;
+      width: 500px;
+      max-height: 650px;
+      min-height: 550px;
+
+    }
+    
+    .plan-title {
+      margin-top: 4%;
+      font-size: 54px;
+    }
+
+    .plan-price span {
+      font-size: 62px;
+    }
+
+    ul {
+      min-height: 100px;
+      padding-left: 35%;
+      font-size: 26px;
+      gap: 5px;
+    }
+
+    button {
+    flex-basis: 70px;
+    width: 40%;
+    min-height: 50px;
+    margin-bottom: 7%;
+
+    font-size: 30px;
+    }
+
+  }
+  
+    
+    /* Hint: What can you do with a media query and flexbox? */
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="pricing-header">
+        <div class="plan-title">Basic</div>
+      </div>
+      
+      <div class="plan-price"><span>$9.99</span>/month</div>
+      <ul class="plan-features">
+        <li> 10GB Storage</li>
+        <li> 1 User</li>
+        <li class="no">Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+
+    </div>
+    <div class="pricing-plan">
+      <div class="pricing-header">
+        <div class="plan-title">Standard</div>
+      </div>
+          <div class="plan-price"><span>$19.99</span>/month</div>
+          <ul class="plan-features">
+            <li> 50GB Storage</li>
+            <li> 5 Users</li>
+            <li> Phone &amp; Email <br />Support</li>
+          </ul>
+          <button class="plan-button">Sign Up</a>
+
+      </div>
+    <div class="pricing-plan">
+      <div class="pricing-header">
+        <div class="plan-title">Premium</div>
+      </div>
+      <div class="plan-price"><span>$49.99</span>/month</div>
+      <ul class="plan-features">
+        <li> 100GB Storage</li>
+        <li> 10 Users</li>
+        <li> 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
